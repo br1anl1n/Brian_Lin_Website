@@ -53,3 +53,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Basic validation
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var message = document.getElementById('message').value;
+    
+    if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+    
+    // Email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+    
+    // Phone validation (if provided)
+    if (phone) {
+        var phoneRegex = /^\+?[\d\s()-]{10,}$/;
+        if (!phoneRegex.test(phone)) {
+            alert('Please enter a valid phone number or leave it blank.');
+            return;
+        }
+    }
+    
+    // If all validations pass, you can submit the form here
+    console.log('Form submitted:', { name, email, phone, message });
+    
+    // Hide the form and show the thank you message
+    document.getElementById('formContainer').style.display = 'none';
+    document.getElementById('thankYouMessage').style.display = 'block';
+});
