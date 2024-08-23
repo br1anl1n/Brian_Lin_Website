@@ -13,7 +13,6 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="resume.html">Resume</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -21,28 +20,34 @@
     </header>
 
     <main class="about-section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="slideshow-container">
-                    <div class="mySlides fade">
-                        <img src="Photo1.JPG" alt="Brian Lin" class="about-photo">
-                    </div>
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="about-content fade-in">
+            <div class="about-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-main">
+                <div class="about-image-container slide-in-left">
+                    <img src="Photo1.JPG" alt="Brian Lin" class="about-photo">
                 </div>
-                <div class="about-text">
-                    <h3>Hi There!</h3>
-                    <p>I'm a Computer Science student at Harvard University with a passion for technology and innovation. I'm constantly exploring new technologies and their applications in solving real-world problems.</p>
-                    <ul class="about-details">
-                        <li><strong>Age:</strong> 20</li>
-                        <li><strong>Email:</strong> brianlin@college.harvard.edu</li>
-                        <li><strong>Phone:</strong> (510) 734-7351</li>
-                    </ul>
+                <div class="about-text slide-in-right">
+                    <p class="intro-text">Hi There! I'm a third year student studying computer science and neuroscience Harvard University and a software engineer at Zeta Surgical, 
+                        a digital surgical startup that focuses on improving the accuracy, safety, and accessibility of image-guided procedures through navigation and robotics.
+                        My interest in medicine and technology started from investigating socioeconomic factors in Autism Spectrum Disorder diagnoses at Stanford's Wall Lab 
+                        to exploring AI biases in healthcare at UCSF's Bakar Computational Health Sciences Institute. Beyond medical applications, I'm eager to explore the 
+                        intersectionalities between technology and different fields, and learn more about how novel innovative tools can address a wide range of other current challenges.
+                        At Harvard, I am on the executive board for the Chinese students' association and a member of the Student Astronomers at the Harvard-Radcliffe. 
+                        Outside of work and school you can find me hiking new trails, playing basketball with friends, or trying to learn new songs on the guitar.
+                    </p>
+                    <div class="about-details">
+                        <!-- Enter text here for white text-->
+                    </div>
+                    <p class="bio-text"></p>
+                    <div class="skills-section">
+        
+                    </div>
                     <div class="social-buttons">
-                        <a href="https://www.linkedin.com/in/br1an-lin/" class="btn" target="_blank">LinkedIn</a>
-                        <a href="https://github.com/br1anl1n" class="btn" target="_blank">GitHub</a>
-                        <a href="https://www.instagram.com/br1anlin/" class="btn" target="_blank">Instagram</a>
+                        <a href="https://www.linkedin.com/in/br1an-lin/" class="btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/br1anl1n" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="https://www.instagram.com/br1anlin/" class="btn" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
                     </div>
                 </div>
             </div>
@@ -52,9 +57,14 @@
     <footer>
         <div class="container">
             <p>&copy; 2024 Brian Lin. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/br1an-lin/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/br1anl1n" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/br1anlin/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
-
-    <script src="slideshow.js"></script>
+    
+    <script src="smooth-scroll.js"></script>
 </body>
 </html>
