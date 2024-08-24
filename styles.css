@@ -283,11 +283,21 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
+/* styles.css with responsive improvements */
+
+/* ... (keep all existing styles up to the media queries) ... */
+
 /* Responsive adjustments */
 @media (max-width: 968px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
     .hero-content {
         flex-direction: column;
         text-align: center;
+        padding: 30px;
     }
 
     .hero-image, .hero-text {
@@ -301,9 +311,121 @@ nav ul li a:hover {
     .skill-showcase {
         flex-wrap: wrap;
     }
+
+    .animated-text {
+        font-size: 2.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-main {
+        flex-direction: column;
+    }
+
+    .about-image-container, .about-text {
+        max-width: 100%;
+    }
+
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form .btn {
+        width: 100%;
+    }
 }
 
-/* ... (rest of the styles remain unchanged) ... */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .animated-text {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .skill-item {
+        font-size: 1.5em;
+    }
+
+    .resume-section h1 {
+        font-size: 2.2em;
+    }
+  
+    .resume-section .subtitle {
+        font-size: 0.9em;
+    }
+
+    .category-box h2 {
+        font-size: 1.2em;
+    }
+
+    .experience-item h3, .education-item h3, .project-item h3, .leadership-item h3, .activity-item h3 {
+        font-size: 1em;
+    }
+
+    .contact-section h2 {
+        font-size: 2em;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improve touch targets for mobile */
+.btn, nav ul li a, .social-links a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Adjust font sizes for better readability on small screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.8em; }
+    h3 { font-size: 1.5em; }
+}
+
+/* ... (keep all remaining styles) ... */
 
 /* About page styles */
 .about-section {
