@@ -87,6 +87,6 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     console.log('Form submitted:', { name, email, phone, message });
     
     // Hide the form and show the thank you message
-    document.getElementById('formContainer').style.display = 'none';
+    document.getElementById('contactForm').style.display = 'none';
     document.getElementById('thankYouMessage').style.display = 'block';
 });
