@@ -58,24 +58,41 @@ nav ul li a:hover {
 .hero-section {
     min-height: 80vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: beige;
     position: relative;
     overflow: hidden;
+    padding: 70px 50px;
+
 }
 
 .hero-content {
     display: flex;
     align-items: center;
     gap: 60px;
-    width: 100%;
+    width: 85%;  /* Changed from 100% to 90% */
     max-width: 1200px;
     padding: 50px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;  /* This centers the card horizontally */
+}
+
+.hero-section .container {
+    width: 100%;
+    max-width: none;
+    padding: 0 ;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 95%;  /* Slightly wider on mobile for better use of space */
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 .hero-image {
@@ -225,27 +242,6 @@ nav ul li a:hover {
     opacity: 1;
 }
 
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: var(--primary-color);
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
 
 /* Quick Info Section */
 .quick-info {
@@ -935,24 +931,27 @@ footer {
     background-color: var(--primary-color);
     color: var(--bg-color);
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
+    min-width: 5px;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 5px 0;  /* Reduced padding */
+    margin-bottom: 5px;  /* Add small margin below social links */
 }
 
 .social-links a {
     color: var(--bg-color);
-    margin: 0 10px;
-    font-size: 1.5em;
+    margin: 0 1px;  /* Slightly reduced margin between icons */
+    font-size: 1em;  /* Slightly smaller icon size */
     transition: color 0.3s ease;
 }
 
-.social-links a:hover {
-    color: var(--secondary-color);
+footer .copyright {
+    font-size: 0.85em;  /* Smaller font size for copyright text */
+    margin-top: 5px;  /* Small margin above copyright text */
 }
 
 /* Social Media Icons */
@@ -983,6 +982,16 @@ footer {
 
 .social-links .fa-instagram {
     color: #E4405F;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 8px 5px;  /* Even smaller padding on mobile */
+    }
+    
+    .social-links a {
+        font-size: 1em;  /* Smaller icons on mobile */
+    }
 }
 
 /* Portfolio Styles */
