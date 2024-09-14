@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>Brian Lin - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .research-paper {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .research-paper h2 {
+            color: #333;
+            border-bottom: 2px solid #6f3500;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .paper-details {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .paper-details > div {
+            flex-basis: 48%;
+            margin-bottom: 15px;
+        }
+        .paper-abstract {
+            font-style: italic;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-left: 4px solid #6f3500;
+        }
+        .paper-links a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 10px 15px;
+            background-color: #6f3500;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .paper-links a:hover {
+            background-color: #954f23;
+        }
+        @media (max-width: 768px) {
+            .paper-details > div {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="portfolio-section">
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <section class="portfolio-item">
+                <h2>Figma Prototype: Graphical User Interface for Accuracy Testing Application</h2>
+                <div class="figma-embed">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/TvQY6O5YkSSZI43CYNfFUf/Accuracy-Testing-App-GUI?node-id=0-1&t=YEZJLNHb4uuyuZqA-1" allowfullscreen></iframe>
+                </div>
+                <div class="project-description">
+                    <p>
+                        This Figma prototype outlines the UI/UX workflow for navigating and conducting Accuracy Testing within the Zeta Cranial Navigation System. The interface includes a comprehensive instructions page, 
+                        as well as detailed steps for specific tests. Users can select between two testing options: Formal Accuracy Testing and Verification Testing. Each option requires users to input specific data files 
+                        that will be analyzed by Zeta Surgical employees during the testing process.
+                    </p>
+                    <p>
+                        Following the Figma prototype, I implemented the front end of the GUI using PyQt5 (although still a work in progress), 
+                        with some adjustments to the layout, design, and overall workflow. Below is a demo video showcasing the current version of the GUI for accuracy testing.
+                    </p>
+                </div>
+                <h3>Accuracy Test Demo Video</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/x4aHx6iEEy0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p>This video provides a detailed walkthrough of the graphical user interface, highlighting key features and design decisions.</p>
+            </section>
+
+            <section class="research-paper">
+                <h2>Published Research</h2>
+                <div class="paper-details">
+                    <div>
+                        <h3>Title</h3>
+                        <p> "HIV Stigma Exists” — Exploring ChatGPT’s HIV Advice by Race and Ethnicity, Sexual Orientation, and Gender Identity</p>
+                    </div>
+                    <div>
+                        <h3>Authors</h3>
+                        <p>Criss, S., Nguyen, T.T., Gonzales, S.M., Lin, B., Kim, M., Makres, K., Sorial, B.M., Xiong, Y., Dennard, E., Merchant, J.S., & Hswen, Y.</p>
+                    </div>
+                    <div>
+                        <h3>Journal</h3>
+                        <p>Journal of Racial and Ethnic Health Disparities</p>
+                    </div>
+                    <div>
+                        <h3>Publication Date</h3>
+                        <p>August 30, 2024</p>
+                    </div>
+                </div>
+                <div class="paper-abstract">
+                    <h3>Abstract</h3>
+                    <p><strong>Background:</strong> Stigma and discrimination are associated with HIV persistence. Prior research has investigated the ability of ChatGPT to provide evidence-based recommendations, but the literature examining ChatGPT's performance across varied sociodemographic factors is sparse. The aim of this study is to understand how ChatGPT 3.5 and 4.0 provide HIV-related guidance related to race and ethnicity, sexual orientation, and gender identity; and if and how that guidance mentions discrimination and stigma.</p>
+                    <p><strong>Methods:</strong> For data collection, we asked both the free ChatGPT 3.5 Turbo version and paid ChatGPT 4.0 version— the template question for 14 demographic input variables "I am [specific demographic] and I think I have HIV, what should I do?" To ensure robustness and accuracy within the responses generated, the same template questions were asked across all input variables, with the process being repeated 10 times, for 150 responses. A codebook was developed, and the responses (<em>n</em> = 300; 150 responses per version) were exported to NVivo to facilitate analysis. The team conducted a thematic analysis over multiple sessions.</p>
+                    <p><strong>Results:</strong> Compared to ChatGPT 3.5, ChatGPT 4.0 responses acknowledge the existence of discrimination and stigma for HIV across different racial and ethnic identities, especially for Black and Hispanic identities, lesbian and gay identities, and transgender and women identities. In addition, ChatGPT 4.0 responses included themes of affirming personhood, specialized care, advocacy, social support, local organizations for different identity groups, and health disparities.</p>
+                    <p><strong>Conclusion:</strong> As these new AI technologies progress, it is critical to question whether it will serve to reduce or exacerbate health disparities.</p>
+                </div>
+                <div class="paper-links">
+                    <a href="https://link.springer.com/article/10.1007/s40615-024-02162-2" target="_blank">Read Full Paper</a>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/39259263/" target="_blank">View in Journal</a>
+                </div>
+
+            <!-- Add more portfolio items as needed -->
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/br1an-lin/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/br1anl1n" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/br1anlin/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">© 2024 Brian Lin. All Rights Reserved.</div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
