@@ -1,19 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Brian Lin - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #6f3500;
+            --secondary-color: #954f23;
+            --bg-color: #f5e6d3;
+            --text-color: #333;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Georgia', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            padding: 3rem 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            font-size: 20px; 
+            font-family: 'Georgia', sans-serif;
+        }
+
+        nav ul li {
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            color: var(--bg-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #e0e0e0;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        .portfolio-section {
+            padding: 40px 0;
+        }
+
+        .project-section {
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             max-width: 100%;
+            margin-bottom: 20px;
         }
+
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -21,52 +97,48 @@
             width: 100%;
             height: 100%;
         }
-        .research-paper {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 30px;
-            margin-top: 50px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .research-paper h2 {
-            color: #333;
-            border-bottom: 2px solid #6f3500;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .paper-details {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .paper-details > div {
-            flex-basis: 48%;
-            margin-bottom: 15px;
-        }
-        .paper-abstract {
-            font-style: italic;
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #fff;
-            border-left: 4px solid #6f3500;
-        }
-        .paper-links a {
+
+        .project-link {
             display: inline-block;
-            margin-right: 15px;
-            padding: 10px 15px;
-            background-color: #6f3500;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
-        .paper-links a:hover {
-            background-color: #954f23;
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            text-align: center;
+            padding: 40px 0;
         }
+
+        .social-links {
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--bg-color);
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #e0e0e0;
+        }
+
         @media (max-width: 768px) {
-            .paper-details > div {
-                flex-basis: 100%;
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
             }
         }
     </style>
@@ -87,22 +159,18 @@
     <main class="portfolio-section">
         <div class="container">
             <h1>My Portfolio</h1>
-            <section class="portfolio-item">
-                <h2>Figma Prototype: Graphical User Interface for Accuracy Testing Application</h2>
+            
+            <section class="project-section">
+                <h2>Figma Prototype: GUI for Accuracy Testing Application</h2>
                 <div class="figma-embed">
                     <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/design/TvQY6O5YkSSZI43CYNfFUf/Accuracy-Testing-App-GUI?node-id=0-1&t=YEZJLNHb4uuyuZqA-1" allowfullscreen></iframe>
                 </div>
-                <div class="project-description">
-                    <p>
-                        This Figma prototype outlines the UI/UX workflow for navigating and conducting Accuracy Testing within the Zeta Cranial Navigation System. The interface includes a comprehensive instructions page, 
-                        as well as detailed steps for specific tests. Users can select between two testing options: Formal Accuracy Testing and Verification Testing. Each option requires users to input specific data files 
-                        that will be analyzed by Zeta Surgical employees during the testing process.
-                    </p>
-                    <p>
-                        Following the Figma prototype, I implemented the front end of the GUI using PyQt5 (although still a work in progress), 
-                        with some adjustments to the layout, design, and overall workflow. Below is a demo video showcasing the current version of the GUI for accuracy testing.
-                    </p>
-                </div>
+                <p>
+                    This Figma prototype outlines the UI/UX workflow for navigating and conducting Accuracy Testing within the Zeta Cranial Navigation System. The interface includes comprehensive instructions and detailed steps for specific tests.
+                </p>
+                <p>
+                    Following the Figma prototype, I implemented the front end of the GUI using PyQt5, with some adjustments to the layout, design, and overall workflow.
+                </p>
                 <h3>Accuracy Test Demo Video</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/x4aHx6iEEy0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -110,40 +178,66 @@
                 <p>This video provides a detailed walkthrough of the graphical user interface, highlighting key features and design decisions.</p>
             </section>
 
-            <section class="research-paper">
-                <h2>Published Research</h2>
-                <div class="paper-details">
-                    <div>
-                        <h3>Title</h3>
-                        <p> "HIV Stigma Exists” — Exploring ChatGPT’s HIV Advice by Race and Ethnicity, Sexual Orientation, and Gender Identity</p>
-                    </div>
-                    <div>
-                        <h3>Authors</h3>
-                        <p>Criss, S., Nguyen, T.T., Gonzales, S.M., Lin, B., Kim, M., Makres, K., Sorial, B.M., Xiong, Y., Dennard, E., Merchant, J.S., & Hswen, Y.</p>
-                    </div>
-                    <div>
-                        <h3>Journal</h3>
-                        <p>Journal of Racial and Ethnic Health Disparities</p>
-                    </div>
-                    <div>
-                        <h3>Publication Date</h3>
-                        <p>August 30, 2024</p>
-                    </div>
-                </div>
-                <div class="paper-abstract">
-                    <h3>Abstract</h3>
-                    <p><strong>Background:</strong> Stigma and discrimination are associated with HIV persistence. Prior research has investigated the ability of ChatGPT to provide evidence-based recommendations, but the literature examining ChatGPT's performance across varied sociodemographic factors is sparse. The aim of this study is to understand how ChatGPT 3.5 and 4.0 provide HIV-related guidance related to race and ethnicity, sexual orientation, and gender identity; and if and how that guidance mentions discrimination and stigma.</p>
-                    <p><strong>Methods:</strong> For data collection, we asked both the free ChatGPT 3.5 Turbo version and paid ChatGPT 4.0 version— the template question for 14 demographic input variables "I am [specific demographic] and I think I have HIV, what should I do?" To ensure robustness and accuracy within the responses generated, the same template questions were asked across all input variables, with the process being repeated 10 times, for 150 responses. A codebook was developed, and the responses (<em>n</em> = 300; 150 responses per version) were exported to NVivo to facilitate analysis. The team conducted a thematic analysis over multiple sessions.</p>
-                    <p><strong>Results:</strong> Compared to ChatGPT 3.5, ChatGPT 4.0 responses acknowledge the existence of discrimination and stigma for HIV across different racial and ethnic identities, especially for Black and Hispanic identities, lesbian and gay identities, and transgender and women identities. In addition, ChatGPT 4.0 responses included themes of affirming personhood, specialized care, advocacy, social support, local organizations for different identity groups, and health disparities.</p>
-                    <p><strong>Conclusion:</strong> As these new AI technologies progress, it is critical to question whether it will serve to reduce or exacerbate health disparities.</p>
-                </div>
-                <div class="paper-links">
-                    <a href="https://link.springer.com/article/10.1007/s40615-024-02162-2" target="_blank">Read Full Paper</a>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/39259263/" target="_blank">View in Journal</a>
-                </div>
+            <section class="project-section">
+                <h2>Published Research Paper</h2>
+                <h3>"HIV Stigma Exists" — Exploring ChatGPT's HIV Advice by Race and Ethnicity, Sexual Orientation, and Gender Identity</h3>
+                <p><strong>Authors:</strong> Criss, S., Nguyen, T.T., Gonzales, S.M., Lin, B., Kim, M., Makres, K., Sorial, B.M., Xiong, Y., Dennard, E., Merchant, J.S., & Hswen, Y.</p>
+                <p><strong>Journal:</strong> Journal of Racial and Ethnic Health Disparities</p>
+                <p><strong>Publication Date:</strong> August 30, 2024</p>
+                <h3>Abstract</h3>
+                <p><strong>Background:</strong> Stigma and discrimination are associated with HIV persistence. Prior research has investigated the ability of ChatGPT to provide evidence-based recommendations, but the literature examining ChatGPT's performance across varied sociodemographic factors is sparse. The aim of this study is to understand how ChatGPT 3.5 and 4.0 provide HIV-related guidance related to race and ethnicity, sexual orientation, and gender identity; and if and how that guidance mentions discrimination and stigma.</p>
+                <p><strong>Methods:</strong> For data collection, we asked both the free ChatGPT 3.5 Turbo version and paid ChatGPT 4.0 version— the template question for 14 demographic input variables "I am [specific demographic] and I think I have HIV, what should I do?" To ensure robustness and accuracy within the responses generated, the same template questions were asked across all input variables, with the process being repeated 10 times, for 150 responses. A codebook was developed, and the responses (<em>n</em> = 300; 150 responses per version) were exported to NVivo to facilitate analysis. The team conducted a thematic analysis over multiple sessions.</p>
+                <p><strong>Results:</strong> Compared to ChatGPT 3.5, ChatGPT 4.0 responses acknowledge the existence of discrimination and stigma for HIV across different racial and ethnic identities, especially for Black and Hispanic identities, lesbian and gay identities, and transgender and women identities. In addition, ChatGPT 4.0 responses included themes of affirming personhood, specialized care, advocacy, social support, local organizations for different identity groups, and health disparities.</p>
+                <p><strong>Conclusion:</strong> As these new AI technologies progress, it is critical to question whether it will serve to reduce or exacerbate health disparities.</p>
+                <a href="https://link.springer.com/article/10.1007/s40615-024-02162-2" target="_blank" class="project-link">Read Full Paper</a>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/39259263/" target="_blank" class="project-link">View in Journal</a>
+            </section>
 
-            <!-- Add more portfolio items as needed -->
+            <section class="project-section">
+                <h2>Autism Spectrum Disorder Diagnosis Research Poster</h2>
+                <img src="final_poster.png" alt="Does Income Affect Autism Diagnosis?" class="project-image">
+                <p>Figure 1: Research poster examining the relationship between income and autism diagnosis age.</p>
+                <img src="graph.png" alt="Clinical Diagnosis of Children and Family Income" class="project-image">
+                <p>Figure 2: Graph showing the relationship between clinical diagnosis age and family income for children with autism.</p>
+            </section>
+            
+            <section class="project-section">
+                <h2>CooC Headband Concept</h2>
+                <p>A preorder website for EEG headbands measuring meditation effectiveness.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tSbeJmkpjo0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
 
+            <section class="project-section">
+                <h2>Certifications and Achievements</h2>
+                <h3>CodePath Advanced Technical Interview Prep Certification</h3>
+                <p>Awarded in Summer 2024, this certification recognizes outstanding performance in completing the CodePath Advanced Technical Interview Prep Course. It demonstrates proficiency in advanced algorithms, data structures, and problem-solving skills essential for technical interviews at top tech companies.</p>
+                <ul>
+                    <li>Certificate ID: 95157</li>
+                    <li>Issued by: CodePath.org</li>
+                    <li>Signed by: Timothy Lee, Co-Founder and CLO, CodePath</li>
+                </ul>
+                <img src="codepath_certificate.png" alt="CodePath Advanced Technical Interview Prep Certification" class="project-image">
+
+                <h3>Encinal High School Valedictorian</h3>
+                <p>Awarded May 26, 2022 in recognition of highest academic achievement in the graduating class.</p>
+                <img src="Valedictorian.png" alt="Encinal High School Valedictorian Certificate" class="project-image">
+            </section>
+
+            <section class="project-section">
+                <h2>Alameda Unified School District AAPI Support Initiative</h2>
+                <img src="AAPI.png" alt="Alameda Unified Stands With Our Asian-American and Pacific Islander Community" class="project-image">
+                <p>As a student board member for the Alameda Unified School District, I spearheaded a district-wide initiative to support the Asian-American and Pacific Islander (AAPI) community during the COVID-19 pandemic, addressing increased discrimination and violence.</p>
+                <h3>Key Achievements:</h3>
+                <ul>
+                    <li>Organized a public demonstration of solidarity</li>
+                    <li>Drafted and passed a resolution of support for the AAPI community</li>
+                    <li>Implemented educational programs on AAPI history and issues</li>
+                    <li>Collaborated with local AAPI organizations for resource provision</li>
+                </ul>
+                <a href="https://www.eastbaytimes.com/2021/04/14/ausd-notes-alameda-schools-pledge-support-to-aapi-community/" target="_blank" class="project-link">Read Full Article</a>
+            </section>
         </div>
     </main>
 
