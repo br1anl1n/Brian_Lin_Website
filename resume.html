@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brian Lin - Resume</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -23,7 +22,7 @@
 
     <main class="resume-section">
         <div class="container">
-            <div class="resume-header">
+            <section class="resume-header">
                 <h1>Brian Lin</h1>
                 <p class="subtitle">Computer Science & Neuroscience Student at Harvard University</p>
                 <div class="contact-info">
@@ -32,104 +31,82 @@
                     <p><i class="fas fa-phone"></i> (510) 734-7351</p>
                     <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/br1an-lin/" target="_blank">LinkedIn</a></p>
                     <p><i class="fab fa-github"></i> <a href="https://github.com/br1anl1n" target="_blank">GitHub</a></p>
+                    <p><i class="fas fa-globe"></i> <a href="https://brian--lin.com" target="_blank">brian--lin.com</a></p>
                 </div>
-            </div>
-            
+            </section>
+
             <div class="resume-grid">
-                <section class="full-width">
-                    <div class="category-box">
-                        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-                        <div class="education-item">
-                            <h3>Harvard College</h3>
-                            <p><strong>B.A in Computer Science with Honors and Minor in Neuroscience</strong></p>
-                            <p><i class="far fa-calendar-alt"></i> Expected Graduation: May 2026</p>
-                        </div>
-                        <div class="education-item">
-                            <h3>Encinal Junior & Senior High School</h3>
-                            <p>GPA: 4.23/4.5 (Weighted), 3.9/4.0 (Unweighted)</p>
-                            <p>Valedictorian, June 2022</p>
-                        </div>
+                <section class="category-box full-width">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="education-item">
+                        <h3>Harvard College</h3>
+                        <p><strong>B.A in Computer Science with Honors and Minor in Neuroscience</strong></p>
+                        <p>Expected Graduation: May 2026</p>
+                        <p><strong>Relevant Coursework:</strong> Abstraction and Design in Computation, Discrete Mathematics for Computer Science, Artificial and Natural Intelligence, Introduction to Algorithms and their Limitations, Data Structures and Algorithms, Vector Calculus and Linear Algebra (Fall), Systems Programming and Machine Organization (Fall)</p>
                     </div>
                 </section>
-                    
-                <section class="full-width">
-                    <div class="category-box">
-                        <h2><i class="fas fa-briefcase"></i> Experience</h2>
-                        <div class="experience-item">
-                            <h3>Zeta Surgical</h3>
-                            <p class="job-title">Software Engineering Intern</p>
-                            <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2024 - Present</p>
-                            <ul>
-                                <li>Constructed a GUI application using PyQt5 for medical device accuracy testing, streamlining complex data analysis processes and enhancing the efficiency of product validation workflows.</li>
-                                <li>Designed and implemented UI/UX for prototypes using Figma, creating a frontend interface featuring dynamic file uploads and real-time data processing. Utilized NumPy, Pandas, and Matplotlib to visualize large datasets and generate interactive statistical reports.</li>
-                                <li>Authored a usability paper based on a Human Factors Evaluation study of the Zeta Cranial Navigation System for EVD procedures</li>
-                            </ul>
-                        </div>
-                        <div class="experience-item">
-                            <h3>Bakar Computational Health Science Institute - UCSF</h3>
-                            <p class="job-title">Data Science Intern</p>
-                            <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2023 - July 2024</p>
-                            <ul>
-                                <li>Utilized Jupyter Lab for advanced Natural Language Processing techniques, including Sentiment Analysis with Azure Machine Learning and VADER, LDA Analysis, and Stop Word Analysis.</li>
-                                <li>Generated word clouds, graphical representations, word frequencies, and identified discrete non-overlapping words among referent groups to facilitate sweeping analysis.</li>
-                                <li>Published a paper that investigates the ethical considerations surrounding the use of generative AI tools for HIV-related health information: <a href=https://pubmed.ncbi.nlm.nih.gov/39259263/ target="_blank">https://pubmed.ncbi.nlm.nih.gov/39259263/</a></li>
 
-                            </ul>
-                        </div>
-                        <div class="experience-item">
-                            <h3>The Wall Lab</h3>
-                            <p class="job-title">Computational Neuroscience Research Intern</p>
-                            <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2021 - August 2021</p>
-                            <ul>
-                                <li>Conducted experimental research on socioeconomic factors affecting timely diagnosis of Autism Spectrum Disorder (ASD) in children.</li>
-                                <li>Assembled data, designed graphical representations, used Excel for statistical analysis, and performed t-tests to determine the significance of ASD and time of diagnosis.</li>
-                                <li>Final Research Poster: <a href="https://tinyurl.com/asdfinalposter" target="_blank">https://tinyurl.com/asdfinalposter</a></li>
-
-                            </ul>
-                        </div>
+                <section class="category-box full-width">
+                    <h2><i class="fas fa-briefcase"></i> Experience</h2>
+                    <div class="experience-item">
+                        <h3>Zeta Surgical</h3>
+                        <p class="job-title">Software Engineering Intern</p>
+                        <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2024 – August 2024</p>
+                        <ul>
+                            <li>Designed UI/UX prototypes with Figma, creating a frontend interface for dynamic file uploads and real-time data processing.</li>
+                            <li>Analyzed datasets up to 35,000 points using NumPy, Pandas, and Matplotlib, generating interactive statistical reports for surgical navigation accuracy.</li>
+                            <li>Developed PyQt5-based GUI application for cranial navigation system testing, reducing testing time by 80% and achieving company-wide adoption.</li>
+                            <li>Authored usability paper based on a Human Factors Evaluation study of 20 neurosurgeons, showing 95% achieved high-performance scores with an average 7.6-minute setup time.</li>
+                        </ul>
                     </div>
-                </section>
-    
-                <section class="full-width">
-                    <div class="category-box">
-                        <h2><i class="fas fa-project-diagram"></i> Personal Projects</h2>
-                        <div class="project-grid">
-                            <div class="project-item">
-                                <h3>CooC Headband Inc.</h3>
-                                <p>Full-stack preorder website using Flask, Python, SQL, HTML, CSS, and Javascript for a startup creating EEG headbands measuring meditation effectiveness.</p>
-                                <a href="http://tinyurl.com/CooCHeadBandWeb" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View Project</a>
-                            </div>
-                            <div class="project-item">
-                                <h3>OCaml MiniML Interpreter</h3>
-                                <p>Advanced interpreter for MiniML with lexical scoping and extended functionalities, including new operators and closure support.</p>
-                                <a href="http://tinyurl.com/MiniMLinterpreter" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> View Project</a>
-                            </div>
-                        </div>
+                    <div class="experience-item">
+                        <h3>Bakar Computational Health Science Institute - UCSF</h3>
+                        <p class="job-title">Data Science Intern</p>
+                        <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2023 – July 2024</p>
+                        <ul>
+                            <li>Utilized NLP techniques via JupyterLab and Azure ML to analyze potential biases in ChatGPT responses across demographic variable groups, revealing varied language patterns across racial, sexual orientation, and gender identity inputs.</li>
+                            <li>Created visualizations and frequency analyses with Python and Matplotlib, identifying that 28% of responses to Black demographic inputs mentioned discrimination and stigma - the highest among all racial/ethnic categories.</li>
+                            <li>Published a paper on AI ethics in HIV-related health information, demonstrating that ChatGPT 4.0 acknowledged discrimination and stigma in 47 responses versus 1 in 3.5, underscoring the need for AI equity: <a href="https://pubmed.ncbi.nlm.nih.gov/39259263/" target="_blank">HIV Stigma Exists</a>.</li>
+                        </ul>
                     </div>
-                </section>
-    
-                <section class="full-width">
-                    <div class="category-box">
-                        <h2><i class="fas fa-laptop-code"></i> Technical Skills & Certifications</h2>
-                        <ul class="skills-list">
-                            <li><i class="fas fa-code"></i> Python, C, C++, Java, JavaScript, HTML, CSS, SQL, OCaml</li>
-                            <li><i class="fas fa-tools"></i> VS Code, GitHub, Jupyter Lab, Microsoft Excel</li>
-                            <li><i class="fas fa-certificate"></i> CodePath Advanced Technical Interview Prep Certificate</li>
+                    <div class="experience-item">
+                        <h3>The Wall Lab</h3>
+                        <p class="job-title">Computational Neuroscience Research Intern</p>
+                        <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2021 - August 2021</p>
+                        <ul>
+                            <li>Conducted research on socioeconomic factors influencing the timely diagnosis of Autism Spectrum Disorder (ASD), analyzing data from over 1,400 children using Excel.</li>
+                            <li>Performed t-tests to assess the relationship between income and age of diagnosis, finding no significant difference, but revealing potential data collection biases.</li>
+                            <li><a href="https://tinyurl.com/asdfinalposter" target="_blank">View Final Research Poster</a></li>
                         </ul>
                     </div>
                 </section>
-                
-            
-            <section class="full-width">
-                <div class="category-box">
-                    <h2><i class="fas fa-users"></i> Leadership & Accomplishments</h2>
+
+                <section class="category-box full-width">
+                    <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-item">
+                            <h3>CooC Headband Inc.</h3>
+                            <p>Designed and built a full-stack pre-order website using HTML, CSS, JavaScript, and Flask for a startup that creates EEG headbands measuring meditation effectiveness.</p>
+                            <a href="http://tinyurl.com/CooCHeadBandWeb" class="btn" target="_blank">View Project</a>
+                        </div>
+                        <div class="project-item">
+                            <h3>CSA Website</h3>
+                            <p>Contributed to the redevelopment of the Harvard-Radcliffe Chinese Students Association's website, transitioning from Squarespace to a custom HTML/CSS platform hosted on Netlify with GitHub integration.</p>
+                            <p>Implemented responsive design and created user-friendly interfaces for member engagement and organization information.</p>
+                            <a href="https://harvardcsa.org" class="btn" target="_blank">View Website</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="category-box full-width">
+                    <h2><i class="fas fa-users"></i> Leadership & Activities</h2>
                     <div class="leadership-item">
                         <h3>Harvard-Radcliffe Chinese Students Association</h3>
-                        <p class="job-title">SibFam CoChair</p>
+                        <p class="job-title">Executive Board Member (Frosh Rep, Sibfam Chair, Tech Chair)</p>
                         <p class="job-duration"><i class="far fa-calendar-alt"></i> September 2022 - Present</p>
                         <ul>
-                            <li>Created a database connecting upper and underclassman general members to form "families".</li>
-                            <li>Managed club budget and partnered with Asian businesses for community events.</li>
+                            <li>Managed a $2000 budget and created a database connecting 100+ members across class years.</li>
+                            <li>Organized funded dinners and retreats, fostering community engagement through partnerships with local businesses.</li>
                         </ul>
                     </div>
                     <div class="leadership-item">
@@ -137,24 +114,30 @@
                         <p class="job-title">Student Board Member/Executive Cabinet Member & Expansion Committee Director</p>
                         <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2020 - June 2022</p>
                         <ul>
-                            <li>Coordinated procedures to create new Student Board Member positions in multiple school districts, representing over 150,000 students.</li>
-                            <li>Led the passage of a resolution to support Senate Bill 14: Mental Health Days as excused absences for high school students.</li>
+                            <li>Coordinated creation of new Student Board Member positions in districts representing 150,000+ students.</li>
+                            <li>Led the passage of a resolution supporting Senate Bill 14: Mental Health Days as excused absences for high school students.</li>
                         </ul>
                     </div>
-                    <div class="leadership-item">
-                        <h3>Institute of Politics Immigration Policy Program</h3>
-                        <p class="job-title">Research Intern</p>
-                        <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2022 - October 2022</p>
-                        <ul>
-                            <li>Analyzed potential policy solutions for immigration registry and wrote weekly reports for a final policy paper.</li>
-                            <li>Presented findings to the program's official commissioner, the Coalition for Humane Immigrant Rights.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+                </section>
+
+                <section class="category-box full-width">
+                    <h2><i class="fas fa-laptop-code"></i> Technical Skills & Certifications</h2>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-code"></i> Python</li>
+                        <li><i class="fas fa-code"></i> C/C++</li>
+                        <li><i class="fas fa-code"></i> Java</li>
+                        <li><i class="fas fa-code"></i> JavaScript</li>
+                        <li><i class="fas fa-code"></i> HTML</li>
+                        <li><i class="fas fa-code"></i> CSS</li>
+                        <li><i class="fas fa-database"></i> SQL</li>
+                        <li><i class="fas fa-calculator"></i> MatLab</li>
+                        <li><i class="fas fa-code"></i> OCaml</li>
+                    </ul>
+                    <p><strong>Developer Tools and Frameworks:</strong> VS Code, Git, GitHub, Flask, JupyterLab/Jupyter Notebooks, Microsoft Excel</p>
+                </section>
+            </div>
         </div>
     </main>
-
 
     <footer>
         <div class="social-links">
@@ -164,6 +147,7 @@
         </div>
         <div class="copyright">© 2024 Brian Lin. All Rights Reserved.</div>
     </footer>
-    <script src="smooth-scroll.js"></script>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

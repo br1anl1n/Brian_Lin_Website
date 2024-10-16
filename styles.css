@@ -1135,4 +1135,100 @@ footer .copyright {
 .p-4 { padding: 1.5rem; }
 .p-5 { padding: 3rem; }
 
+@media (max-width: 1199.98px) {
+    .container {
+      width: 95%;
+      padding: 30px;
+    }
+    
+    .hero-content {
+      padding: 40px;
+    }
+    
+    .animated-text {
+      font-size: 2.8em;
+    }
+  }
+  
+  /* Medium devices (tablets, less than 992px) */
+  @media (max-width: 991.98px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .hero-image, .hero-text {
+      max-width: 100%;
+    }
+    
+    .cta-buttons {
+      justify-content: center;
+    }
+    
+    .skill-showcase {
+      flex-wrap: wrap;
+    }
+    
+    .resume-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Small devices (landscape phones, less than 768px) */
+  @media (max-width: 767.98px) {
+    .container {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav ul li {
+      margin: 10px 0;
+    }
+    
+    .about-main {
+      flex-direction: column;
+    }
+    
+    .about-image-container, .about-text {
+      max-width: 100%;
+    }
+    
+    .contact-content {
+      flex-direction: column;
+    }
+    
+    .contact-form {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) {
+    .animated-text {
+      font-size: 2em;
+    }
+    
+    .btn {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+    
+    .skill-item {
+      font-size: 1.5em;
+    }
+    
+    .resume-section h1 {
+      font-size: 2.2em;
+    }
+    
+    .category-box h2 {
+      font-size: 1.2em;
+    }
+  }
+
 /* End of styles.css */
