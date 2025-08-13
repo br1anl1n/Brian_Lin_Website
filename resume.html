@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brian Lin - Resume</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -40,17 +40,27 @@
                     <h2><i class="fas fa-graduation-cap"></i> Education</h2>
                     <div class="education-item">
                         <h3>Harvard College</h3>
-                        <p><strong>B.A in Computer Science with Honors and Minor in Neuroscience</strong></p>
+                        <p><strong>Candidate for B.A in Computer Science and Minor in Neuroscience</strong></p>
                         <p>Expected Graduation: May 2026</p>
-                        <p><strong>Relevant Coursework:</strong> Abstraction and Design in Computation, Discrete Mathematics for Computer Science, Artificial and Natural Intelligence, Introduction to Algorithms and their Limitations, Data Structures and Algorithms, Vector Calculus and Linear Algebra (Fall), Systems Programming and Machine Organization (Fall)</p>
+                        <p><strong>Relevant Coursework:</strong> Data Structures and Algorithms, Systems Programming and Machine Organization, Planning and Learning Methods in AI, Biological and Artificial Intelligence, Software Engineering with Generative AI (Fall)</p>
                     </div>
                 </section>
 
                 <section class="category-box full-width">
                     <h2><i class="fas fa-briefcase"></i> Experience</h2>
                     <div class="experience-item">
+                        <h3>Coinbase</h3>
+                        <p class="job-title">Software Engineer Intern</p>
+                        <p class="job-duration"><i class="far fa-calendar-alt"></i> May 2025 – August 2025</p>
+                        <ul>
+                            <li>Expanded admin tooling for a service handling millions in user assets, doubling API coverage from 8 to 16+ endpoints to enable real-time debugging of balance discrepancies across Coinbase's portfolio platform.</li>
+                            <li>Built end-to-end financial aggregation APIs using Go and GraphQL that combine user account data from 20+ microservices.</li>
+                            <li>Increased customer support workflow efficiency by ~96%, reducing issue resolution time from hours to minutes.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
                         <h3>Zeta Surgical</h3>
-                        <p class="job-title">Software Engineering Intern</p>
+                        <p class="job-title">Software Engineer Intern</p>
                         <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2024 – August 2024</p>
                         <ul>
                             <li>Designed UI/UX prototypes with Figma, creating a frontend interface for dynamic file uploads and real-time data processing.</li>
@@ -60,12 +70,12 @@
                         </ul>
                     </div>
                     <div class="experience-item">
-                        <h3>Bakar Computational Health Science Institute - UCSF</h3>
+                        <h3>Bakar Computational Health Science Institute, UCSF</h3>
                         <p class="job-title">Data Science Intern</p>
                         <p class="job-duration"><i class="far fa-calendar-alt"></i> June 2023 – July 2024</p>
                         <ul>
                             <li>Utilized NLP techniques via JupyterLab and Azure ML to analyze potential biases in ChatGPT responses across demographic variable groups, revealing varied language patterns across racial, sexual orientation, and gender identity inputs.</li>
-                            <li>Created visualizations and frequency analyses with Python and Matplotlib, identifying that 28% of responses to Black demographic inputs mentioned discrimination and stigma - the highest among all racial/ethnic categories.</li>
+                            <li>Created visualizations and frequency analyses with Python and Matplotlib, identifying that 28% of responses to Black demographic inputs mentioned discrimination and stigma, the highest among all racial/ethnic categories.</li>
                             <li>Published a paper on AI ethics in HIV-related health information, demonstrating that ChatGPT 4.0 acknowledged discrimination and stigma in 47 responses versus 1 in 3.5, underscoring the need for AI equity: <a href="https://pubmed.ncbi.nlm.nih.gov/39259263/" target="_blank">HIV Stigma Exists</a>.</li>
                         </ul>
                     </div>
@@ -76,7 +86,7 @@
                         <ul>
                             <li>Conducted research on socioeconomic factors influencing the timely diagnosis of Autism Spectrum Disorder (ASD), analyzing data from over 1,400 children using Excel.</li>
                             <li>Performed t-tests to assess the relationship between income and age of diagnosis, finding no significant difference, but revealing potential data collection biases.</li>
-                            <li><a href="https://tinyurl.com/asdfinalposter" target="_blank">View Final Research Poster</a></li>
+                            <li><a href="https://tinyurl.com/asdfinalposter" target="_blank">Final Research Poster</a></li>
                         </ul>
                     </div>
                 </section>
@@ -85,15 +95,19 @@
                     <h2><i class="fas fa-project-diagram"></i> Projects</h2>
                     <div class="project-grid">
                         <div class="project-item">
-                            <h3>CooC Headband Inc.</h3>
-                            <p>Designed and built a full-stack pre-order website using HTML, CSS, JavaScript, and Flask for a startup that creates EEG headbands measuring meditation effectiveness.</p>
-                            <a href="http://tinyurl.com/CooCHeadBandWeb" class="btn" target="_blank">View Project</a>
+                            <h3>Intracranial Hemorrhage Segmentation</h3>
+                            <p>Developed a deep learning model for automated segmentation of intracranial hemorrhages in CT scans using PyTorch and attention-enhanced U-Net architecture, achieving 0.85+ Dice coefficient on validation data.</p>
+                            <p>Implemented data processing pipelines for multi-window CT scans with custom loss functions (Dice + Focal) and data augmentation techniques, resulting in a 30% reduction in false negatives compared to baseline models.</p>
                         </div>
                         <div class="project-item">
                             <h3>CSA Website</h3>
-                            <p>Contributed to the redevelopment of the Harvard-Radcliffe Chinese Students Association's website, transitioning from Squarespace to a custom HTML/CSS platform hosted on Netlify with GitHub integration.</p>
+                            <p>Redeveloped the Harvard-Radcliffe Chinese Students Association's website, transitioning from Squarespace to a custom HTML/CSS platform hosted on Netlify with GitHub integration: harvardcsa.org.</p>
                             <p>Implemented responsive design and created user-friendly interfaces for member engagement and organization information.</p>
                             <a href="https://harvardcsa.org" class="btn" target="_blank">View Website</a>
+                        </div>
+                        <div class="project-item">
+                            <h3>CooC Headband Inc.</h3>
+                            <p>Designed and built a full-stack pre-order website using HTML, CSS, JavaScript, and Flask for a startup that creates EEG headbands measuring meditation effectiveness: <a href="http://tinyurl.com/CooCHeadBandWeb" target="_blank">http://tinyurl.com/CooCHeadBandWeb</a>.</p>
                         </div>
                     </div>
                 </section>
@@ -102,7 +116,7 @@
                     <h2><i class="fas fa-users"></i> Leadership & Activities</h2>
                     <div class="leadership-item">
                         <h3>Harvard-Radcliffe Chinese Students Association</h3>
-                        <p class="job-title">Executive Board Member (Frosh Rep, Sibfam Chair, Tech Chair)</p>
+                        <p class="job-title">Executive Board Member</p>
                         <p class="job-duration"><i class="far fa-calendar-alt"></i> September 2022 - Present</p>
                         <ul>
                             <li>Managed a $2000 budget and created a database connecting 100+ members across class years.</li>
@@ -121,19 +135,21 @@
                 </section>
 
                 <section class="category-box full-width">
-                    <h2><i class="fas fa-laptop-code"></i> Technical Skills & Certifications</h2>
+                    <h2><i class="fas fa-laptop-code"></i> Technical Skills</h2>
                     <ul class="skills-list">
                         <li><i class="fas fa-code"></i> Python</li>
+                        <li><i class="fas fa-code"></i> Go</li>
                         <li><i class="fas fa-code"></i> C/C++</li>
                         <li><i class="fas fa-code"></i> Java</li>
                         <li><i class="fas fa-code"></i> JavaScript</li>
                         <li><i class="fas fa-code"></i> HTML</li>
                         <li><i class="fas fa-code"></i> CSS</li>
                         <li><i class="fas fa-database"></i> SQL</li>
-                        <li><i class="fas fa-calculator"></i> MatLab</li>
+                        <li><i class="fas fa-calculator"></i> MATLAB</li>
                         <li><i class="fas fa-code"></i> OCaml</li>
+                        <li><i class="fas fa-code"></i> LaTeX</li>
                     </ul>
-                    <p><strong>Developer Tools and Frameworks:</strong> VS Code, Git, GitHub, Flask, JupyterLab/Jupyter Notebooks, Microsoft Excel</p>
+                    <p><strong>Developer Tools & Frameworks:</strong> Docker, Git, GraphQL, gRPC, Protocol Buffers, PyTorch, Flask, JupyterLab</p>
                 </section>
             </div>
         </div>
